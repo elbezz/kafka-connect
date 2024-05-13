@@ -161,18 +161,3 @@ services:
     environment:
       KAFKA_BROKERCONNECT: "PLAINTEXT://kafka-broker-1:9092,PLAINTEXT://kafka-broker-2:9092,PLAINTEXT://kafka-broker-3:9092"
 
- # docker exec -it mysql mysql -uroot -proot
-  mysql:
-    container_name: mysql
-    # restart: always
-    image: mysql:latest
-    environment:
-      MYSQL_ROOT_PASSWORD: 'root'
-      # MYSQL_USER: 'test'
-      # MYSQL_PASS: 'pass'
-    ports:
-      - "3307:3306"
-    volumes:
-      - my-datavolume:/var/lib/mysql
-volumes:
-  my-datavolume:
